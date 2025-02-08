@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  height: 100vh;
+  background-color: #000000;
+}
+
+@font-face {
+  font-family: 'special';
+  src: local('special'), url(./fonts/special.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'pFont';
+  src: local('pFont'), url(./fonts/pFont.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'about';
+  src: local('about'), url(./fonts/about.ttf) format('truetype');
+}
+
+.specialFont {
+  font-family: 'special', sans-serif;
+}
+
+p, button{
+  font-family: 'pFont', sans-serif;
+}
+
+.aboutFont {
+  font-family: 'about';
+}
+
+input:focus {
+  border: none; 
+  outline: none; 
+}
+
+textarea:focus {
+  border: none; 
+  outline: none; 
+}
+
+.custom-input:focus {
+  border-bottom: 0.5px solid #fff; 
+}
+
+.swiper-pagination-bullet {
+  background-color: #ffffff !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #C42348 !important; 
+}
+
+input[type="radio"]:checked {
+  background-color: #ff0000; /* crvena boja */
+}
+
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal content */
+.modal-content {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Modal header */
+.modal-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Close button */
+.modal-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Modal body text */
+.modal-body p {
+  font-size: 18px;
+  color: #333;
+}
