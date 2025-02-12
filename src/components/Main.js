@@ -13,7 +13,13 @@ function Main ({selectedLanguage}) {
                 </div>
             </div>
             <div className='abosolute' style={{zIndex: -1}}>
-                <video src='videos/homeVideo.mp4' autoPlay loop muted className='absolute z-10 left-0 top-0 size-full object-cover object-center'/>
+                <video 
+                    src='https://www.dropbox.com/scl/fi/mqezlsz64r4cbjd470vul/homeVideo.mp4?rlkey=4ckdcy9v9jnenh2t0rckhtda4&st=tkxzlmfo&dl=0&raw=1' 
+                    autoPlay 
+                    loop 
+                    muted 
+                    className='absolute z-10 left-0 top-0 size-full object-cover object-center'
+                />
             </div>
         </div>
     )
