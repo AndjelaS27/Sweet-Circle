@@ -15,16 +15,16 @@ const cartSlice = createSlice({
             state.totalPrice = action.payload
         },
         setCardHolderName: (state, action) => {
-            state.totalPrice = action.payload
+            state.cardHolderName = action.payload;
         },
         setCardNumber: (state, action) => {
-            state.totalPrice = action.payload
+            state.cardNumber = action.payload;
         },
         setExDate: (state, action) => {
-            state.totalPrice = action.payload
+            state.exDate = action.payload;
         },
         setCode: (state, action) => {
-            state.totalPrice = action.payload
+            state.code = action.payload;
         },
         setCartType: (state, action) => {
             state.selectedCardType = action.payload

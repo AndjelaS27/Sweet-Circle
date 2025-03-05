@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useEffect } from "react"
 import { RxCross1 } from "react-icons/rx";
 import { FaPlus, FaMinus } from "react-icons/fa6";
 import { useDispatch, useSelector } from "react-redux";
@@ -47,8 +47,9 @@ function CartPage() {
     };
 
     const handleChangeNumber = (event) => {
-        if (cardNumber.length < 16) {
-            dispatch(setCardNumber(event.target.value))
+        const value = event.target.value;
+        if (value.length <= 16) {
+            dispatch(setCardNumber(value))
         }
         
     };
@@ -185,7 +186,7 @@ function CartPage() {
             <div className='felx flex-col w-full'>
                 <div className='flex flex-col md:flex-row items-start md:items-center md:justify-between mb-10 px-5 md:pl-0'>
                     <p className='text-white text-4xl md:text-5xl md:ml-5 specialFont uppercase'>Shopping Cart</p>
-                    <span className='text-white gap-3 font-thin text-3xl flex md:self-end'>Subtotal: <span className='specialFont text-white'>${totalPrice.toFixed(2)}</span></span>
+                    <span className='text-white gap-3 font-thin text-3xl flex md:self-end'>Subtotal: <span className='specialFont text-white'>${(Number(totalPrice) || 0).toFixed(2)}</span></span>
                 </div>
 
                 <div className='md:w-[60vw] flex flex-col'>

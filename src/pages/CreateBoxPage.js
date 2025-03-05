@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { GoChevronUp, GoChevronDown } from "react-icons/go";
 import { languages } from "../languages";
 import { useSelector, useDispatch } from "react-redux";

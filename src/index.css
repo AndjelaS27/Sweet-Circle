@@ -57,10 +57,9 @@ textarea:focus {
 }
 
 input[type="radio"]:checked {
-  background-color: #ff0000; /* crvena boja */
+  background-color: #ff0000; 
 }
 
-/* Modal overlay */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -74,7 +73,6 @@ input[type="radio"]:checked {
   z-index: 1000;
 }
 
-/* Modal content */
 .modal-content {
   background-color: #fff;
   border-radius: 8px;
@@ -84,20 +82,17 @@ input[type="radio"]:checked {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Modal header */
 .modal-header {
   display: flex;
   justify-content: flex-end;
 }
 
-/* Close button */
 .modal-close {
   background: none;
   border: none;
   cursor: pointer;
 }
 
-/* Modal body text */
 .modal-body p {
   font-size: 18px;
   color: #333;
