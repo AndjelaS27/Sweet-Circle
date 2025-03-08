@@ -6,9 +6,7 @@ export default function VanillaChocolate(props) {
   
   const groupRef = useRef();
 
-  useEffect(() => {
-    console.log('Nodes:', nodes); 
-    console.log('Materials:', materials);  
+  useEffect(() => { 
   }, [nodes, materials]);
 
   if (!nodes || !materials) {

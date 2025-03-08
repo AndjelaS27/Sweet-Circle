@@ -37,7 +37,6 @@ function CreateDonutPage() {
   }
 
   function getModelName(glaze, sprinkles) {
-    console.log(`${glaze}${sprinkles}`)
     return `${glaze}${sprinkles}`;
   }
 
@@ -98,28 +97,28 @@ const handleAdd = () => {
             <p className='font-extrabold'>Glaze</p>
             <div className='flex p-[10px] items-center h-[8vh] rounded-xl justify-between'>
               <div className='flex p-[10px] mt-2 relative items-center w-full h-[8vh] rounded-xl justify-between'>
-                <div className='flex flex-col justify-center items-center'>
+                <div className='flex flex-col relative justify-center items-center py-[3px]'>
                 {activeGlaze === 'Strawberry' && (
-                  <div className='border-[2px] border-red-500 w-9 h-9 rounded-full absolute top-0 z-10'/>
+                  <div className='border-[2px] border-red-500 w-9 h-9 rounded-full top-0 absolute z-10'/>
                 )}
                 <div onClick={(event) => handleGlaze(event.target.id)} id='Strawberry' className='flex items-center border-[1px] bg-red-500 justify-center rounded-full h-[30px] w-[30px]'/>
                   <p className={`mt-1 text-sm ${activeGlaze === 'Strawberry' ? 'text-black' : 'text-white'}`}>Strawberry</p>
                 </div>
-                <div className='flex flex-col justify-center items-center'>
+                <div className='flex flex-col justify-center items-center relative py-[3px]'>
                 {activeGlaze === 'Vanilla' && (
                   <div className='border-[2px] border-amber-200 w-9 h-9 rounded-full absolute top-0 z-10'/>
                 )}
                 <div onClick={(event) => handleGlaze(event.target.id)} id='Vanilla' className='flex items-center border-[1px] justify-center bg-amber-100 rounded-full h-[30px] w-[30px]'/>
                   <p className={`mt-1 text-sm ${activeGlaze === 'Vanilla' ? 'text-black' : 'text-white'}`}>Vanilla</p>
                 </div>
-                <div className='flex flex-col justify-center items-center'>
+                <div className='flex flex-col justify-center items-center relative py-[3px]'>
                   {activeGlaze === 'Chocolate' && (
                     <div className='border-[2px] border-amber-950 w-9 h-9 rounded-full absolute top-0 z-10'/>
                   )}
-                  <div onClick={(event) => handleGlaze(event.target.id)} id='Chocolate' className='flex items-center border-[1px] justify-center border-white border-[3px] bg-amber-950 rounded-full h-[30px] w-[30px] box-content'/>
+                  <div onClick={(event) => handleGlaze(event.target.id)} id='Chocolate' className='flex items-center border-[1px] justify-center border-white bg-amber-950 rounded-full h-[30px] w-[30px]'/>
                   <p className={`mt-1 text-sm ${activeGlaze === 'Chocolate' ? 'text-black' : 'text-white'}`}>Chocolate</p>
                 </div>
-                <div className='flex flex-col justify-center items-center'>
+                <div className='flex flex-col justify-center items-center relative py-[3px]'>
                   {activeGlaze === 'Caramel' && (
                     <div className='border-[2px] border-yellow-600 w-9 h-9 rounded-full absolute top-0 z-10'/>
                   )}

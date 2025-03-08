@@ -19,13 +19,11 @@ function ShopPage({ selectedLanguage }) {
 
     const { flavors, donutList, activeSlide, userDonutList } = useSelector((state) => state.donut);
 
-    console.log(activeSlide)
     const donutParam = new URLSearchParams(location.search).get('donut');
 
     const { modalMessage, isModalOpen, openModal, closeModal } = useModal();
 
     useEffect(() => {
-        console.log(donutParam)
         if (donutParam) {
             const donutIndex = staticDonutList.findIndex(donut => donut.name.toLowerCase() === donutParam.toLowerCase());
             if (donutIndex !== -1) {
@@ -76,8 +74,6 @@ function ShopPage({ selectedLanguage }) {
             dispatch(setFlavors(newList));
         }
     };
-
-    console.log(activeSlide)
 
     const handleAdd = (donut) => {
         if (userDonutList.find((d) => d.id === donut.id)) {

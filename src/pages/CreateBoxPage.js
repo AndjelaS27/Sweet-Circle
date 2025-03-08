@@ -123,7 +123,6 @@ function CreateBoxPage({selectedLanguage}) {
         if (filteredDonuts.length === 0) {
             openModal("You didnt select any donut")
         } else {
-            console.log(filteredDonuts)
             let combinedName = "";
             let combinedPrice = 0;
 

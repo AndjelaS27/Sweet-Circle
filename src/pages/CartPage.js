@@ -73,7 +73,6 @@ function CartPage() {
             openModal('CVC code is not valid');
         } else {
             const exDateList = exDate.split('/');
-            console.log(!exDateList.length === 2)
             if (!exDateList.length === 2 || (!parseInt(exDateList[0]) && exDateList[0].length !== 2) || (!parseInt(exDateList[1]) && exDateList[1].length !== 2)) {
                 openModal("Expiration date is not valid");
             } else {

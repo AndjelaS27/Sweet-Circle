@@ -6,8 +6,6 @@ export default function StrawberryStrawberry(props) {
   const { nodes, materials } = useGLTF('/models/strawberryStrawberry.glb');
   
   const groupRef = useRef();
-  console.log(nodes)
-  console.log(materials)
   if (!nodes || !materials) {
     return null; 
   }

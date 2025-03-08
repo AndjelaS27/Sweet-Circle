@@ -7,8 +7,6 @@ export default function VanillaCaramel(props) {
   const groupRef = useRef();
 
   useEffect(() => {
-    console.log('Nodes:', nodes); 
-    console.log('Materials:', materials);  
   }, [nodes, materials]);
 
   if (!nodes || !materials) {

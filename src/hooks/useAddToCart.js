@@ -5,7 +5,6 @@ export const useAddToCart = () => {
     const dispatch = useDispatch();
 
     const handleAddToCart = (donutList) => {
-        console.log(donutList)
         dispatch(setUserDonutList(donutList));
     }
     return {handleAddToCart};

@@ -116,7 +116,6 @@ const donutSlice = createSlice({
             state.donutList = action.payload;
         },
         setUserDonutList: (state, action) => {
-            console.log(action.payload)
             state.userDonutList = [...state.userDonutList, ...action.payload]
         },
         removeDonut: (state, action) => {
@@ -126,12 +125,10 @@ const donutSlice = createSlice({
             const { donut: donutAction, count: countAction } = action.payload
             const modifiedList = state.userDonutList.map((donut) => {
                 if (donut.description === donutAction.description) {
-                    console.log("Iste krofne")
                     return {...donut, count: countAction}
                 }
                 return donut;
             })
-            console.log(modifiedList)
             state.userDonutList = modifiedList;
         }
     }
